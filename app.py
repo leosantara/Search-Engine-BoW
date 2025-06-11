@@ -8,15 +8,15 @@ CORS(app) # Mengaktifkan CORS untuk semua rute
 
 
 # Pastikan path ini sesuai dengan tempat file N-gram CSV
-N_GRAM_DATA_FOLDER = "D:\\Latihan\\Python\\NLP\\Week 7\\pdf\\"
+N_GRAM_DATA_FOLDER = "D:\\Latihan\\Python\\NLP\\Search-Engine-BoW\\File PDF\\"
 # Path ke file CSV hasil praproses dokumen
-PREPROCESSED_DOCS_PATH = "D:\\Latihan\\Python\\NLP\\Week 7\\preprocessed_documents.csv"
+PREPROCESSED_DOCS_PATH = "D:\\Latihan\\Python\\NLP\\Search-Engine-BoW\\HasilPreprosesing\\Preprocessed_SearchBoW.csv"
 
 # Load n-gram data
 try:
-    df_unigram = pd.read_csv(f"{N_GRAM_DATA_FOLDER}unigram.csv")
-    df_bigram = pd.read_csv(f"{N_GRAM_DATA_FOLDER}bigram.csv")
-    df_trigram = pd.read_csv(f"{N_GRAM_DATA_FOLDER}trigram.csv")
+    df_unigram = pd.read_csv(f"D:\\Latihan\\Python\\NLP\\Search-Engine-BoW\\HasilPreprosesing\\1unigram.csv")
+    df_bigram = pd.read_csv(f"D:\\Latihan\\Python\\NLP\\Search-Engine-BoW\\HasilPreprosesing\\2bigram.csv")
+    df_trigram = pd.read_csv(f"D:\\Latihan\\Python\\NLP\\Search-Engine-BoW\\HasilPreprosesing\\3trigram.csv")
 
     df_bigram['bigram'] = df_bigram['bigram'].apply(eval)
     df_trigram['trigram'] = df_trigram['trigram'].apply(eval)
